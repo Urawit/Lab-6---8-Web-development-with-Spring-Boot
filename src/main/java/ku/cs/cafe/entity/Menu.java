@@ -4,6 +4,7 @@ package ku.cs.cafe.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 
@@ -20,4 +21,7 @@ public class Menu {
 
     private String name;
     private double price;
+
+    @ManyToOne
+    private Category category;
 }
